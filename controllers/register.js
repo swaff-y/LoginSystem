@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Register = require("../models/Register");
+const data = require("../data");
 
 router.get("/", async (req,res) => {
   res.render("register.ejs", { name: 'Kyle'});
