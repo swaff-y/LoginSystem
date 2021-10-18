@@ -8,9 +8,13 @@ router.get("/", async (req,res) => {
 })
 
 router.post("/", async (req,res) => {
-  const name = req.body.name;
-  const email = req.body.email;
-  const password = req.body.password;
+  const sendObj = {
+    name: req.body.name,
+    email: req.body.email,
+    password:req.body.password
+  }
+  data.push(sendObj);
+  console.log(data[1].name);
 })
 
 module.exports = router
