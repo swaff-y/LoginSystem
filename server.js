@@ -2,6 +2,10 @@ require("dotenv").config();
 
 const express = require('express');
 const app = express();
+const passport = require('passport');
+
+const initializePassport = require('./passportConfig');
+initializePassport(passport);
 
 //tell server we are using ejs
 app.set('view-engine', 'ejs')
