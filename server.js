@@ -6,6 +6,9 @@ const app = express();
 //tell server we are using ejs
 app.set('view-engine', 'ejs')
 
+//Use fields from forms and send it to posts
+app.use(express.urlencoded({ extended: false }))
+
 app.listen(3000);
 
 //controllers
