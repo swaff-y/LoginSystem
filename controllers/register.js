@@ -6,4 +6,8 @@ router.get("/", async (req,res) => {
   res.render("register.ejs", { name: 'Kyle'});
 })
 
+router.post("/", async (req,res) => {
+  
+})
+
 module.exports = router
