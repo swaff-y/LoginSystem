@@ -10,6 +10,7 @@ A Login system using Express and Nodejs
 4. npm i bcrypt
 5. npm i passport passport-local express-session express-flash
 5. npm i express-session express-flash
+6. npm i method-override
 
 ## Steps
 

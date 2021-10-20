@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const Index = require("../models/index");
+const passport = require('passport');
+const Logout = require("../models/logout");
 
-router.get("/", checkAuthenticated, (req,res) => {
-  res.render("index.ejs", { name: req?.user?.name });
+router.delete("/", checkAuthenticated, (req,res) => {
+  req.logOut();
+  res.redirect('/login');
 })
 
 function checkAuthenticated(req, res, next){
